@@ -1,0 +1,150 @@
+/* Contact */
+
+footer
+{
+    background-color: #c49d83;
+}
+.btn
+{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid rgba(215, 213, 210, 0.8);
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btn:hover
+{
+    background-color: #c49d83;
+    box-shadow: 0 0 8px #c49d83, 0 0 16px #c49d83;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.subtitle
+{
+    color: #785b1a;
+    font-weight: 700;
+}
+.contact-left
+{
+    flex-basis: 40%;
+    margin-left: 80px;
+}
+
+.contact-right
+{
+    flex-basis: 60%;
+}
+
+.contact-left p
+{
+    margin-top: 40px;
+    color: #785b1a;
+    font-weight: 500;
+    
+}
+
+.contact-left p i
+{
+    color: white;
+    margin-right: 15px;
+
+}
+
+.social-icons
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icons a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover
+{
+ color: #785b1a;
+ transform: translateY(-5px);
+}
+
+.btn.btn2
+{
+    background-color:#785b1a;
+    display: inline-block;
+}
+
+.btn.btn2 .fa-solid{
+    color: white;
+    width: 20%;
+}
+
+.contact-right form
+{
+    width: 100%;
+}
+
+form input,form textarea
+{
+    width: 80%;
+    border: 0;
+    outline: none;
+    background:white;
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px #785b1a, 0 0 16px #785b1a;
+}
+
+form .btn.btn2
+{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+.copyright
+{
+    width: 100%;
+    text-align:center;
+    padding: 25px 0;
+    font-weight: 300px;
+    margin-top: 20px;
+    color:#785b1a;
+}
+
+.copyright p i
+{
+    color: #785b1a;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left, .contact-right {
+        margin-left: 0;
+        width: 90%;
+    }
+}

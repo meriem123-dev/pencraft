@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencraft</title>
+    <link rel="stylesheet" href="styleMenu.css">
+    <link rel="stylesheet" href="styleacceuil.css">
+    <link rel="stylesheet" href="stylecontact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+
+<body>
+    <!-- Animation Background -->
+    <header>
+        <video autoplay loop muted id="background-video">
+            <source src="images/Design sans titre.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav>
+            <div class="logo">
+                <img src="images/PenCraft-removebg-preview.png" alt="Logo">
+            </div>
+            <ul id="menu">
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Contact Us</a></li>
+                <li><a href="#"><i class="fas fa-briefcase"></i> Services</a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> Login/Register</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Basket</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Welcome to PenCraft</h1>
+            <h6>Your ideas, Our creation .<br> We bring your visions to life.Your imagination inspires us to create.</h3>
+            <button class="btn btn2">Order Now <a href=""></a></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Products Section -->
+        <h2 class="sub-title fade-in">Our Products</h2>
+        <section class="products fade-in">
+            <button id="prevBtn">&#10094;</button>
+            <div class="product-container">
+                <div class="product-card">
+                    <img src="images/wedding2.jpeg" alt="Wedding Carte">
+                    <div class="product-info">
+                        <h2>Wedding Cards</h2>
+                        <p>100+ designs</p>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/cartevisite1.jpeg" alt="Business Carte">
+                    <div class="product-info">
+                        <h2>Business Cards</h2>
+                        <p>50+ designs</p>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/cv.jpeg" alt="CV">
+                    <div class="product-info">
+                        <h2>CV</h2>
+                        <p>50+ Designs</p>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/flyer.jpeg" alt="Flayer">
+                    <div class="product-info">
+                        <h2>Flyers</h2>
+                        <p>50+ Designs</p>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/logos.jpeg" alt="Logo">
+                    <div class="product-info">
+                        <h2>Logos</h2>
+                        <p>50+ Designs</p>
+                        <button>Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+            <button id="nextBtn">&#10095;</button>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="latest-news fade-in">
+            <h2>Latest News</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/cartevisite.jpeg" alt="Article 1">
+                    </div>
+                    <div class="news-overlay">
+                        <h3>How to choose a design and to custom it</h3>
+                        <p>Follow the steps and order your design.</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/wedding1.jpeg" alt="Article 2">
+                    </div>
+                    <div class="news-overlay">
+                        <h3>Graphic Trends of 2025</h3>
+                        <p>Explore the latest news on Graphic Design.</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="sub-title fade-in">What We Offer You</h2>
+        <section class="services fade-in">
+            <div class="service-card">
+                <i class="fas fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Always On Time</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-palette"></i>
+                <h3>Hight-quality desings</h3>
+                <p>Creativity without limits</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tags"></i>
+                <h3>Competitive Prices</h3>
+                <p>Attractive rates</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clock"></i>
+                <h3>Timely Dealines</h3>
+                <p>Commitement to punctuality</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle">Contact Us</h1>
+                        <p><a href=""><i class="fa-solid fa-square-envelope"></i></a> pencraftprof@gmail.com</p>
+                        <p><a href=""><i class="fa-solid fa-phone"></i></a>05 40 03 60 23</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-reddit"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-right">
+                        <form action="" name="submit-to-google-sheet">
+                          <input type="text" name="Name" placeholder="Your Name" required>
+                          <input type="email" name="Email" placeholder="Your mail" required>
+                          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                          <button type="submit" class="btn btn2">Submit <a href=""><i class="fa-solid fa-paper-plane"></i></a></button>
+                          <span id="msg"></span>
+                    </div>
+            </div>
+            <div class="copyright">Copyrights <i class="fa-regular fa-copyright"></i>  PenCraft</div>
+        </div>
+       
+    </footer>
+
+<script>
+
+
+    // Menu toggle
+    var menu = document.getElementById("menu");
+    
+    function closemenu() {
+        menu.style.right = "-250px";
+    }
+    
+    function openmenu() {
+        menu.style.right = "0";
+    }
+    
+    // Carousel des cartes
+    let currentIndex = 0;
+    const cardWidth = 330;
+    const container = document.querySelector('.product-container');
+    const cards = document.querySelectorAll('.product-card');
+    const totalCards = cards.length;
+    const visibleCards = 3;
+    
+    // Fonction pour faire défiler les cartes
+    function scrollToCard(index) {
+        const scrollAmount = index * cardWidth;
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Prochaine carte
+    function nextCard() {
+        currentIndex = (currentIndex + 1) % totalCards;
+        scrollToCard(currentIndex);
+    }
+    
+    // Carte précédente
+    function prevCard() {
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+        scrollToCard(currentIndex);
+    }
+    
+    // Défilement automatique
+    let autoScroll = setInterval(nextCard, 1000);
+    
+    // Gestion des clics sur les boutons
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        clearInterval(autoScroll);
+        nextCard();
+        autoScroll = setInterval(nextCard, 1000);
+    });
+    
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        clearInterval(autoScroll);
+        prevCard();
+        autoScroll = setInterval(nextCard, 1000);
+    });
+    
+    // Arrêt du défilement automatique au survol
+    container.addEventListener('mouseenter', () => clearInterval(autoScroll));
+    container.addEventListener('mouseleave', () => autoScroll = setInterval(nextCard, 2000));
+    
+    // Animation d'apparition des articles au défilement
+    const newsItems = document.querySelectorAll('.news-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    newsItems.forEach((item) => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(50px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(item);
+    });
+
+    
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); 
+        }
+                            });
+    }, {
+    threshold: 0.2 
+       });
+
+
+    fadeElements.forEach(el => {
+    fadeObserver.observe(el);
+    });
+
+ 
+</script>   
+</body>
+</html>

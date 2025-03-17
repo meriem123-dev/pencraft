@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; /* inclure borders at paddings*/
+    font-family:'Roboto',sans-serif;
+}
+
+body{
+    display: flex; /*conteneur flexible*/
+    justify-content: center;/*Centre les éléments verticalement dans le conteneur*/
+    align-items: center;/*Centre les éléments horizentalement dans le conteneur*/
+    min-height: 100vh;
+    background: linear-gradient(90deg,#e2e2e2,#c49d83);
+}
+
+.container{
+    position: relative;/*reste dans son lux normal mais on peut le déplacer avce left right......*/
+    width: 850px;
+    height: 550px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    overflow: hidden;/*cache tout ce qui dépasse les dimensions du contatiner*/
+    margin: 20px;  
+}
+
+/* style formulaire */
+.form-box{
+    position: absolute;/*pour le placer de maniére indépendante par rapport à son parent container*/
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    color: #888;
+    text-align: center;
+    padding: 40px; 
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s, visibility 0s 1s;/* premiére dure 6s type 1.2 avant    2eme visibilité qui change immédiatement*/
+}
+
+.container.active .form-box
+{
+    right: 50%;/*lorsque container a la classe active le form box se déplace vers la gauche*/
+}
+
+.form-box.register
+{
+    visibility: hidden;/*initialment le form register est cahé*/
+}
+
+.container.active .form-box.register
+{
+    visibility: visible;/*lorsque on ajoute active a container le form d'inscription devient lisible*/
+}
+
+form{
+    width: 100% ;
+}
+
+.container h1
+{
+    font-size: 35px;
+    margin: -10px 0;   
+
+}
+
+/* style des champs */
+.input-box
+{
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-box input{
+    width:100%;
+    padding: 13px;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color:#888;
+    font-weight: 400;
+}
+
+.input-box input::placeholder{
+ color: #888;
+ font-weight: 300;
+}
+
+/* style des icones des champs */
+.input-box ion-icon
+{
+    position: absolute;
+    right: 20px;
+    top: 50%;/*pour le centrer par rapport à son parent celle là plus celle en bas*/
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+}
+
+/* mot de passe oublié */
+.forgot-link
+{
+    margin: -15px 0 15px;
+
+}
+
+.forgot-link a
+{
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+}
+ /* les bouttons */
+.btn
+{
+    width: 100%;
+    height: 48px;
+    background:#c49d83;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+
+.container p{
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+/* icones réseaux */
+.social-icons
+{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a
+{
+    display: inline-flex;/*chaque icone reste en ligne avec les autres et devient flex*/
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+/* le truc de l'écriture à gauche ou droite */
+.toggle-box
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+}
+
+/* ajouter un élément avant le toggle box */
+.toggle-box::before{
+    content: '';
+    position: absolute;
+    left: -250%;/*cacher la boite à gauche*/
+    width: 300%;
+    height: 100%;
+    background:#c49d83 ;
+    border-radius: 150px;
+    z-index: 2;
+    transition: 1.8s ease-in-out;/*animation fluide*/
+}
+
+.container.active .toggle-box::before{
+    left:50%;/*faire glisser la boite vers la droite*/
+}
+
+/* style des 2 paneaux */
+.toggle-panel
+{
+    position: absolute;
+    width: 50%;/*occupe 50% du conteneur*/
+    height: 100%; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: .6s ease-in-out;
+}
+
+.toggle-panel.toggle-left{
+    left:0;/*commence à gauche*/
+    transition-delay: 1.2s;/*s'annime aprés 1.2 s*/
+    
+}
+
+.container.active .toggle-panel.toggle-left
+{
+ left:-50%;/*glisse hors de l'écran à gauche*/
+ transition-delay:.6s ;
+}
+
+.toggle-panel.toggle-right
+{
+ right:-50%;/*hors de l'écran à droite*/
+ transition-delay: .6s;
+}
+
+.container.active .toggle-panel.toggle-right
+{
+ right: 0;/*glisse de la droite pour devenir visible*/
+ transition-delay:1.2s ;
+}
+
+.toggle-panel p
+{
+    margin-bottom: 20px;
+}
+
+/* bouttons des panels */
+.toggle-panel .btn
+{
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+/* petits écrans */
+@media screen and (max-width : 650px)
+{
+    .container{
+        height: calc(100vh - 40px);/*100% de lécran - 40px*/
+    }
+
+    /* formulaires */
+    .form-box{
+      
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+    }
+
+    .container.active .form-box
+    {
+        right: 0;
+        bottom: 30%;
+    }
+
+    /* ajouter un élément avant le toggle box */
+    .toggle-box::before
+    {
+        left: 0;
+        top:-270%;/*cacher la boite en haut*/
+        width:100%;
+        height: 300%;
+        border-radius: 20vw;
+    }
+
+    /* faire glisser la boite vers le bas */
+    .container.active .toggle-box::before
+    {
+        left: 0;
+        top: 70%;
+    }
+
+    /* les panneaux haut et bas */
+    .toggle-panel{
+       width:100%;
+       height: 30%;
+    }
+
+    .toggle-panel.toggle-left{
+        top:0;
+        
+    }
+
+    .container.active .toggle-panel.toggle-left
+    {
+        left: 0; 
+        top: -30%;/*pour qu'il monte*/
+        
+    }
+
+    .toggle-panel.toggle-right{
+        right: 0;
+        bottom: -30px;
+        
+    }
+
+    .container.active .toggle-panel.toggle-right
+    {
+        bottom:0;/*revient à sa place*/
+        display: none;
+    }
+
+    .toggle-panel h1 
+    {
+        font-size: 20px;
+    }
+
+}
+
+/* trés petits écrans */
+@media screen and (max-width : 400px)
+{
+    .form-box{ 
+        padding: 20px;
+    }
+
+    .toggle-panel h1 
+    {
+        font-size: 25px;
+    }
+
+}
